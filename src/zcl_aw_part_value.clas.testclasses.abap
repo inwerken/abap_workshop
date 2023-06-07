@@ -1,0 +1,19 @@
+CLASS test DEFINITION FINAL
+  INHERITING FROM zcl_aw_tm_part_Value
+  FOR TESTING
+  DURATION SHORT
+  RISK LEVEL HARMLESS.
+
+  PRIVATE SECTION.
+    METHODS setup.
+    DATA cut TYPE REF TO zcl_aw_part_value.
+ENDCLASS.
+
+
+CLASS test IMPLEMENTATION.
+
+  METHOD setup.
+    cut = NEW #( ).
+  ENDMETHOD.
+
+ENDCLASS.

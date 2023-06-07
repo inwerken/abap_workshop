@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_INTF" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOINTERF>
+    <CLSNAME>ZIF_AW_PART_VALUE</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>ABAP Workshop: Exercises for VALUE Statement</DESCRIPT>
+    <EXPOSURE>2</EXPOSURE>
+    <STATE>1</STATE>
+    <UNICODE>X</UNICODE>
+   </VSEOINTERF>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>VALUE_FILL_STRUCTURE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Fill the result structure with the given values</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>VALUE_FILL_TABLE_FOR_NEXT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Return table with letters from A to E</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>VALUE_FILL_TABLE_STATIC</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Fill address table</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>VALUE_RETURN_DYNAMIC</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Return values with requested structure</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>VALUE_FILL_TABLE_FOR_NEXT</CMPNAME>
+     <SCONAME>RESULT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Result</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>VALUE_FILL_TABLE_STATIC</CMPNAME>
+     <SCONAME>R_RESULT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>addresses</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>VALUE_RETURN_DYNAMIC</CMPNAME>
+     <SCONAME>E_RESULT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Result</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>VALUE_RETURN_DYNAMIC</CMPNAME>
+     <SCONAME>I_RETURN_ADDRESS</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Return values of structure TS_ADDRESS</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>VALUE_RETURN_DYNAMIC</CMPNAME>
+     <SCONAME>I_RETURN_PERSON</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Return values of structure TS_PERSON</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>
