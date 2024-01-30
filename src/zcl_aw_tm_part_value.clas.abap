@@ -1,25 +1,35 @@
-CLASS zcl_aw_tm_part_value DEFINITION
-  INHERITING FROM zcl_aw_test_master
-  FOR TESTING
-  RISK LEVEL HARMLESS
-  DURATION SHORT
-  PUBLIC
-  CREATE PUBLIC .
+class ZCL_AW_TM_PART_VALUE definition
+  public
+  inheriting from ZCL_AW_TEST_HELPER
+  abstract
+  create public
+  for testing
+  duration short
+  risk level harmless .
 
-  PUBLIC SECTION.
-  PROTECTED SECTION.
-    METHODS structure FOR TESTING.
-    METHODS table FOR TESTING.
-    METHODS dynamic FOR TESTING.
-    methods table_letters for testing.
-  PRIVATE SECTION.
-    DATA cut TYPE REF TO zif_aw_part_value.
-    METHODS setup.
+public section.
+
+  methods CONSTRUCTOR .
+protected section.
+
+  methods STRUCTURE
+  for testing .
+  methods TABLE
+  for testing .
+  methods DYNAMIC
+  for testing .
+  methods TABLE_LETTERS
+  for testing .
+private section.
+
+  data CUT type ref to ZIF_AW_PART_VALUE .
 ENDCLASS.
 
 
 
-CLASS zcl_aw_tm_part_value IMPLEMENTATION.
+CLASS ZCL_AW_TM_PART_VALUE IMPLEMENTATION.
+
+
   METHOD structure.
     cl_abap_unit_assert=>assert_equals(
       exp = VALUE zif_aw_types=>address(
@@ -36,9 +46,6 @@ CLASS zcl_aw_tm_part_value IMPLEMENTATION.
               i_country   = 'US' ) ).
   ENDMETHOD.
 
-  METHOD setup.
-    cut = NEW zcl_aw_part_value( ).
-  ENDMETHOD.
 
   METHOD table.
 
@@ -47,6 +54,7 @@ CLASS zcl_aw_tm_part_value IMPLEMENTATION.
                        THEN abap_true
                        ELSE abap_false ) ).
   ENDMETHOD.
+
 
   METHOD dynamic.
 
@@ -78,4 +86,9 @@ CLASS zcl_aw_tm_part_value IMPLEMENTATION.
 
   ENDMETHOD.
 
+
+  METHOD constructor.
+    super->constructor( ).
+    cut ?= mo_class_to_test_generic.
+  ENDMETHOD.
 ENDCLASS.
